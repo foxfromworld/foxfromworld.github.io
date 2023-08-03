@@ -21,7 +21,7 @@
 <meta property="og:image" content="https://foxfromworld.github.io/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/connect.png">
 <meta property="og:image" content="https://foxfromworld.github.io/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/password.PNG">
 <meta property="article:published_time" content="2023-08-03T10:23:56.000Z">
-<meta property="article:modified_time" content="2023-08-03T11:06:50.702Z">
+<meta property="article:modified_time" content="2023-08-03T11:21:46.913Z">
 <meta property="article:author" content="Jane">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://foxfromworld.github.io/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/extension.png">
@@ -105,21 +105,21 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="Enable-SSH-on-the-server"><a href="#Enable-SSH-on-the-server" class="headerlink" title="Enable SSH on the server"></a>Enable SSH on the server</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install openssh-server</span><br></pre></td></tr></table></figure>
+        <h3 id="Enable-SSH-on-the-server"><a href="#Enable-SSH-on-the-server" class="headerlink" title="Enable SSH on the server"></a>Enable SSH on the server</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install openssh-server</span><br></pre></td></tr></table></figure>
 
-<h2 id="Install-the-extension-in-Visual-Studio-Code"><a href="#Install-the-extension-in-Visual-Studio-Code" class="headerlink" title="Install the extension in Visual Studio Code"></a>Install the extension in Visual Studio Code</h2><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/extension.png"></p>
-<h2 id="After-installing-the-extension-the-green-button-and-the-new-status-bar-will-appear-at-the-bottom-left"><a href="#After-installing-the-extension-the-green-button-and-the-new-status-bar-will-appear-at-the-bottom-left" class="headerlink" title="After installing the extension, the green button and the new status bar will appear at the bottom left."></a>After installing the extension, the green button and the new status bar will appear at the bottom left.</h2><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/connection.png"></p>
-<h2 id="Click-on-the-green-button-to-connect-to-a-new-host"><a href="#Click-on-the-green-button-to-connect-to-a-new-host" class="headerlink" title="Click on the green button to connect to a new host."></a>Click on the green button to connect to a new host.</h2><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/Connect2Host.png"></p>
-<h2 id="Enter-the-command-to-connect-to-the-server"><a href="#Enter-the-command-to-connect-to-the-server" class="headerlink" title="Enter the command to connect to the server."></a>Enter the command to connect to the server.</h2><p>Example: ssh username@ip</p>
+<h3 id="Install-the-extension-in-Visual-Studio-Code"><a href="#Install-the-extension-in-Visual-Studio-Code" class="headerlink" title="Install the extension in Visual Studio Code"></a>Install the extension in Visual Studio Code</h3><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/extension.png"></p>
+<h3 id="After-installing-the-extension-the-green-button-and-the-new-status-bar-will-appear-at-the-bottom-left"><a href="#After-installing-the-extension-the-green-button-and-the-new-status-bar-will-appear-at-the-bottom-left" class="headerlink" title="After installing the extension, the green button and the new status bar will appear at the bottom left."></a>After installing the extension, the green button and the new status bar will appear at the bottom left.</h3><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/connection.png"></p>
+<h3 id="Click-on-the-green-button-to-connect-to-a-new-host"><a href="#Click-on-the-green-button-to-connect-to-a-new-host" class="headerlink" title="Click on the green button to connect to a new host."></a>Click on the green button to connect to a new host.</h3><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/Connect2Host.png"></p>
+<h3 id="Enter-the-command-to-connect-to-the-server"><a href="#Enter-the-command-to-connect-to-the-server" class="headerlink" title="Enter the command to connect to the server."></a>Enter the command to connect to the server.</h3><p>Example: ssh username@ip</p>
 <p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/NewHost.png"></p>
-<h2 id="Save-the-config"><a href="#Save-the-config" class="headerlink" title="Save the config"></a>Save the config</h2><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/config.png"></p>
-<h2 id="Connect-to-the-host-via-the-pop-up-or-the-green-button"><a href="#Connect-to-the-host-via-the-pop-up-or-the-green-button" class="headerlink" title="Connect to the host via the pop-up or the green button."></a>Connect to the host via the pop-up or the green button.</h2><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/connect.png"></p>
-<h2 id="Input-the-password-Every-time"><a href="#Input-the-password-Every-time" class="headerlink" title="Input the password. (Every time.)"></a>Input the password. (Every time.)</h2><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/password.PNG"></p>
+<h3 id="Save-the-config"><a href="#Save-the-config" class="headerlink" title="Save the config"></a>Save the config</h3><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/config.png"></p>
+<h3 id="Connect-to-the-host-via-the-pop-up-or-the-green-button"><a href="#Connect-to-the-host-via-the-pop-up-or-the-green-button" class="headerlink" title="Connect to the host via the pop-up or the green button."></a>Connect to the host via the pop-up or the green button.</h3><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/connect.png"></p>
+<h3 id="Input-the-password-to-establish-the-connection-every-time"><a href="#Input-the-password-to-establish-the-connection-every-time" class="headerlink" title="Input the password to establish the connection (every time)."></a>Input the password to establish the connection (every time).</h3><p><img src="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/password.PNG"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://foxfromworld.github.io/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/" data-id="clkv1yf580005prrw6hcz9ddb" data-title="Remote development with terminal over SSH using Visual Studio Code" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://foxfromworld.github.io/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/" data-id="clkv2htvc0004zurwdgb6ec5i" data-title="Remote development with terminal over SSH using Visual Studio Code" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
