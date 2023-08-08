@@ -208,13 +208,11 @@ In stall the Utterances comment sys"/>
 <p><img src="/2023/08/07/How-to-add-a-comment-system-to-Hexo/permission.PNG"></p>
 <p><img src="/2023/08/07/How-to-add-a-comment-system-to-Hexo/test.PNG"></p>
 <h2 id="Ummm…The-function-is-not-working-properly-I-left-one-message-under-one-post-and-it’s-appearing-on-every-post"><a href="#Ummm…The-function-is-not-working-properly-I-left-one-message-under-one-post-and-it’s-appearing-on-every-post" class="headerlink" title="Ummm…The function is not working properly. I left one message under one post and it’s appearing on every post."></a>Ummm…The function is not working properly. I left one message under one post and it’s appearing on every post.</h2><p>So I changed issue-term from “url” to “pathname” and the problem is still there…</p>
-<script src="https://utteranc.es/client.js"
-        repo="foxfromworld/utterances_comments"
-        issue-term="pathname"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
-</script>
+<h2 id="I-applied-a-new-theme-to-my-blog"><a href="#I-applied-a-new-theme-to-my-blog" class="headerlink" title="I applied a new theme to my blog"></a>I applied a new theme to my blog</h2><p>Add this setting to my-blog&#x2F;themes&#x2F;clean-blog&#x2F;_config.yml</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">utterances:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<p>Addd the snippet to my-blog&#x2F;themes&#x2F;clean-blog&#x2F;layout&#x2F;_partial&#x2F;comments.ejs</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;comments&quot; id=&quot;comments&quot;&gt;</span><br><span class="line">&lt;script src=&quot;https://utteranc.es/client.js&quot;</span><br><span class="line">    repo=&quot;foxfromworld/utterances_comments&quot;</span><br><span class="line">    issue-term=&quot;pathname&quot;</span><br><span class="line">    theme=&quot;github-light&quot;</span><br><span class="line">    crossorigin=&quot;anonymous&quot;</span><br><span class="line">    async&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 
                 
             </div>
