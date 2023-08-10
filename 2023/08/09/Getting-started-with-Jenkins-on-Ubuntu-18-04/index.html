@@ -278,6 +278,23 @@ Check with the command below
 
 <p>Then I got this…</p>
 <p><img src="/2023/08/09/Getting-started-with-Jenkins-on-Ubuntu-18-04/error2.PNG"></p>
+<p>Tried to run &#x2F;opt&#x2F;docker-desktop&#x2F;bin&#x2F;com.docker.diagnose check</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Starting diagnostics</span><br><span class="line"></span><br><span class="line">[PASS] DD0039: are KVM user permissions configured?</span><br><span class="line">[PASS] DD0018: does the host support virtualization?</span><br><span class="line">[PASS] DD0001: is the application running?</span><br><span class="line">[FAIL] DD0017: can a VM be started? vm has not started: failed to open kmsg.log: open /home/username/.docker/desktop/log/vm/kmsg.log: no such file or directory</span><br><span class="line">[FAIL] DD0016: is the LinuxKit VM running? prereq failed: can a VM be started?</span><br><span class="line">[FAIL] DD0011: are the LinuxKit services running? prereq failed: is the LinuxKit VM running?</span><br><span class="line">[FAIL] DD0004: is the Docker engine running? prereq failed: are the LinuxKit services running?</span><br><span class="line">[PASS] DD0015: are the binary symlinks installed?</span><br><span class="line">[FAIL] DD0031: does the Docker API work? prereq failed: is the Docker engine running?</span><br><span class="line">[PASS] DD0013: is the $PATH ok?</span><br><span class="line">[FAIL] DD0034: is Context set to a Docker Desktop context? CLI context is set to docker-ce engine</span><br><span class="line">[FAIL] DD0003: is the Docker CLI working? prereq failed: is the Docker engine running?</span><br><span class="line">[FAIL] DD0038: is the connection to Docker working? prereq failed: is the Docker engine running?</span><br><span class="line">[FAIL] DD0014: are the backend processes running? prereq failed: is the LinuxKit VM running?</span><br><span class="line">[FAIL] DD0007: is the backend responding? prereq failed: are the backend processes running?</span><br></pre></td></tr></table></figure>
+
+<p>Try to install LinuxKit</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/linuxkit/linuxkit</span><br><span class="line">$ cd linuxkit</span><br><span class="line">$ sudo make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+
+<p>The issue is still not solved. I even checked the setting of Intel virtualization technology and VT-d in the BIOS. They were already enabled…</p>
+<p>So I proceeded to install Jenkins…</p>
+<p><a target="_blank" rel="noopener" href="https://pkg.jenkins.io/debian/">https://pkg.jenkins.io/debian/</a></p>
+<p>After the installation, browse to <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080</a>.</p>
+<p><img src="/2023/08/09/Getting-started-with-Jenkins-on-Ubuntu-18-04/unlock.PNG"></p>
+<p>Use the command below to get the password to unlock Jenkins.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cat /var/lib/jenkins/secrets/initialAdminPassword</span><br></pre></td></tr></table></figure>
+
+<p>Install suggested plugins and wait for the installation to finish.</p>
+<p>After the installation, create the first admin user</p>
+<p>At “Instance Configuration”, click on “Save and Finish”, then “Start using Jenkins”.</p>
 
 
                 
