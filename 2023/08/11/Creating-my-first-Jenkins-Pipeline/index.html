@@ -242,6 +242,13 @@ After installing the plugin, restart Jenk"/>
 
 <p>Go back to the dashboard, click on “Build Now”, you can see the result.</p>
 <p><img src="/2023/08/11/Creating-my-first-Jenkins-Pipeline/firstbuild.PNG"></p>
+<p>After successfully check out the code, now we can try to build the project.</p>
+<p>Click on “Pipeline Syntax” to find the script for “sh: Shell Script”,</p>
+<p><img src="/2023/08/11/Creating-my-first-Jenkins-Pipeline/build.PNG"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">pipeline &#123;</span><br><span class="line">    agent any</span><br><span class="line"></span><br><span class="line">    stages &#123;</span><br><span class="line">        stage(&#x27;Checkout&#x27;) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">                checkout scmGit(branches: [[name: &#x27;main&#x27;]], extensions: [], userRemoteConfigs: [[url: &#x27;https://github.com/foxfromworld/python-test.git&#x27;]])</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        stage(&#x27;Build&#x27;) &#123;</span><br><span class="line">            steps &#123;</span><br><span class="line">                sh &#x27;python3 countOdds.py&#x27;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Click on “Build Now” and you can see the message.</p>
+<p><img src="/2023/08/11/Creating-my-first-Jenkins-Pipeline/built.PNG"></p>
 
 
                 
