@@ -22,6 +22,10 @@
     
 
     
+        <meta name="description" content="You are given a positive integer n.
+Let even denote the number of even indices in the binary representation of n (0-indexed) with value 1.
+Let odd den"/>
+    
 
     <!--Author-->
     
@@ -30,10 +34,14 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="One fox from the world"/>
+        <meta property="og:title" content="Number of Even and Odd Bits | LeetCode 2595 | C"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="You are given a positive integer n.
+Let even denote the number of even indices in the binary representation of n (0-indexed) with value 1.
+Let odd den"/>
     
 
     <!--Open Graph Site Name-->
@@ -41,7 +49,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -60,7 +68,7 @@
 
     <!-- Title -->
     
-    <title>LeetCode - One fox from the world</title>
+    <title>Number of Even and Odd Bits | LeetCode 2595 | C - One fox from the world</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -164,101 +172,107 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>LeetCode</h1>
+                <div class="post-heading">
+                    <h1>Number of Even and Odd Bits | LeetCode 2595 | C</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-08-30
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/LeetCode/">#LeetCode</a> <a href="/tags/C/">#C</a> <a href="/tags/Bit-Manipulation/">#Bit Manipulation</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/08/30/Number-of-Even-and-Odd-Bits-LeetCode-2595-C/">
-        <h1 class="post-title archive">
-            Number of Even and Odd Bits | LeetCode 2595 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>You are given a positive integer n.</p>
+<p>Let even denote the number of even indices in the binary representation of n (0-indexed) with value 1.</p>
+<p>Let odd denote the number of odd indices in the binary representation of n (0-indexed) with value 1.</p>
+<p>Return an integer array answer where answer &#x3D; [even, odd].</p>
+<p>Example 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 17</span><br><span class="line">Output: [2,0]</span><br><span class="line">Explanation: The binary representation of 17 is 10001. </span><br><span class="line">It contains 1 on the 0th and 4th indices. </span><br><span class="line">There are 2 even and 0 odd indices.</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: n = 2</span><br><span class="line">Output: [0,1]</span><br><span class="line">Explanation: The binary representation of 2 is 10.</span><br><span class="line">It contains 1 on the 1st index. </span><br><span class="line">There are 0 even and 1 odd indices.</span><br></pre></td></tr></table></figure>
+
+<p>Constraints:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= n &lt;= 1000</span><br></pre></td></tr></table></figure>
+
+<p>Approach</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use bitwise operation to get the specific bit.</span><br></pre></td></tr></table></figure>
+
+<p>Algorithm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. Get the bit by the &quot;AND&quot; operation.</span><br><span class="line">2. Shift the bit out.</span><br><span class="line">3. Increase the counter.</span><br><span class="line">4. Repeat until the number is eaqul or smaller than 0.</span><br></pre></td></tr></table></figure>
+
+<p>Implementation</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * Note: The returned array must be malloced, assume caller calls free().</span><br><span class="line"> */</span><br><span class="line">int* evenOddBit(int n, int* returnSize)&#123;</span><br><span class="line">  int *result = calloc(2, sizeof(int));</span><br><span class="line">  int index = 0;</span><br><span class="line">  while(n&gt;0)</span><br><span class="line">  &#123;</span><br><span class="line">    if(n &amp; 1==1)</span><br><span class="line">    &#123;</span><br><span class="line">      result[index%2]++;</span><br><span class="line">    &#125;</span><br><span class="line">    n = n&gt;&gt;1;</span><br><span class="line">    index++;</span><br><span class="line">  &#125;</span><br><span class="line">  *returnSize = 2;</span><br><span class="line">  return result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+
+<div class="comments" id="comments">
+<script src="https://utteranc.es/client.js"
+    repo="foxfromworld/utterances_comments"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
 </div>
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/08/30/First-Letter-to-Appear-Twice-LeetCode-2351-C/">
-        <h1 class="post-title archive">
-            First Letter to Appear Twice | LeetCode 2351 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/29/Apply-Operations-to-an-Array-LeetCode-2460-C/">
-        <h1 class="post-title archive">
-            Apply Operations to an Array | LeetCode 2460 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-29
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/28/Count-the-Number-of-Vowel-Strings-in-Range-LeetCode-2586-C/">
-        <h1 class="post-title archive">
-            Count the Number of Vowel Strings in Range | LeetCode 2586 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-28
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/24/Excel-Sheet-Column-Title-LeetCode-168-C/">
-        <h1 class="post-title archive">
-            Excel Sheet Column Title | LeetCode 168 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-24
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
