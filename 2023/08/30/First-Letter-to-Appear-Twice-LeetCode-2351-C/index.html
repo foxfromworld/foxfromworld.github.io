@@ -22,6 +22,10 @@
     
 
     
+        <meta name="description" content="Given a string s consisting of lowercase English letters, return the first letter to appear twice.
+Note:
+A letter a appears twice before another lette"/>
+    
 
     <!--Author-->
     
@@ -30,10 +34,14 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="One fox from the world"/>
+        <meta property="og:title" content="First Letter to Appear Twice | LeetCode 2351 | C"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Given a string s consisting of lowercase English letters, return the first letter to appear twice.
+Note:
+A letter a appears twice before another lette"/>
     
 
     <!--Open Graph Site Name-->
@@ -41,7 +49,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -60,7 +68,7 @@
 
     <!-- Title -->
     
-    <title>LeetCode - One fox from the world</title>
+    <title>First Letter to Appear Twice | LeetCode 2351 | C - One fox from the world</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -164,88 +172,106 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>LeetCode</h1>
+                <div class="post-heading">
+                    <h1>First Letter to Appear Twice | LeetCode 2351 | C</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-08-30
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/LeetCode/">#LeetCode</a> <a href="/tags/C/">#C</a> <a href="/tags/Counting/">#Counting</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/08/30/First-Letter-to-Appear-Twice-LeetCode-2351-C/">
-        <h1 class="post-title archive">
-            First Letter to Appear Twice | LeetCode 2351 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Given a string s consisting of lowercase English letters, return the first letter to appear twice.</p>
+<p>Note:</p>
+<p>A letter a appears twice before another letter b if the second occurrence of a is before the second occurrence of b.<br>s will contain at least one letter that appears twice.</p>
+<p>Example 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;abccbaacz&quot;</span><br><span class="line">Output: &quot;c&quot;</span><br><span class="line">Explanation:</span><br><span class="line">The letter &#x27;a&#x27; appears on the indexes 0, 5 and 6.</span><br><span class="line">The letter &#x27;b&#x27; appears on the indexes 1 and 4.</span><br><span class="line">The letter &#x27;c&#x27; appears on the indexes 2, 3 and 7.</span><br><span class="line">The letter &#x27;z&#x27; appears on the index 8.</span><br><span class="line">The letter &#x27;c&#x27; is the first letter to appear twice, because out of all the letters the index of its second occurrence is the smallest.</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;abcdd&quot;</span><br><span class="line">Output: &quot;d&quot;</span><br><span class="line">Explanation:</span><br><span class="line">The only letter that appears twice is &#x27;d&#x27; so we return &#x27;d&#x27;.</span><br></pre></td></tr></table></figure>
+
+<p>Constraints:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">2 &lt;= s.length &lt;= 100</span><br><span class="line">s consists of lowercase English letters.</span><br><span class="line">s has at least one repeated letter.</span><br></pre></td></tr></table></figure>
+
+<p>Approach</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Create a array for counting. When the letter appears, increase the value of the counter by 1. If the value is 2, return the letter.</span><br></pre></td></tr></table></figure>
+
+<p>Algorithm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. Create an array.</span><br><span class="line">2. Use the index to find the corresponding counter.</span><br><span class="line">3. Check if the value of the counter is 2.</span><br></pre></td></tr></table></figure>
+
+<p>Implementation</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">char repeatedCharacter(char * s)&#123;</span><br><span class="line">    int count[26] = &#123;0&#125;;</span><br><span class="line">    int index = 0;</span><br><span class="line">    int i=0;</span><br><span class="line">    for(i=0;i&lt;strlen(s);i++)</span><br><span class="line">    &#123;</span><br><span class="line">        index = s[i]-&#x27;a&#x27;;</span><br><span class="line">        count[index]++;</span><br><span class="line">        if(count[index] == 2)</span><br><span class="line">            break;</span><br><span class="line">    &#125;</span><br><span class="line">    return s[i];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+
+<div class="comments" id="comments">
+<script src="https://utteranc.es/client.js"
+    repo="foxfromworld/utterances_comments"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
 </div>
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/08/29/Apply-Operations-to-an-Array-LeetCode-2460-C/">
-        <h1 class="post-title archive">
-            Apply Operations to an Array | LeetCode 2460 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-29
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/28/Count-the-Number-of-Vowel-Strings-in-Range-LeetCode-2586-C/">
-        <h1 class="post-title archive">
-            Count the Number of Vowel Strings in Range | LeetCode 2586 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-28
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/24/Excel-Sheet-Column-Title-LeetCode-168-C/">
-        <h1 class="post-title archive">
-            Excel Sheet Column Title | LeetCode 168 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-24
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
