@@ -22,6 +22,8 @@
     
 
     
+        <meta name="description" content="You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of l"/>
+    
 
     <!--Author-->
     
@@ -34,6 +36,8 @@
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of l"/>
     
 
     <!--Open Graph Site Name-->
@@ -194,13 +198,50 @@
 
             <!-- Tags and categories -->
            
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/LeetCode/">#LeetCode</a> <a href="/tags/C/">#C</a> <a href="/tags/Array/">#Array</a> <a href="/tags/String/">#String</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
+            
 
             <!-- Gallery -->
             
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                
+                <p>You are given a 0-indexed array of strings details. Each element of details provides information about a given passenger compressed into a string of length 15. The system is such that:</p>
+<p>The first ten characters consist of the phone number of passengers.<br>The next character denotes the gender of the person.<br>The following two characters are used to indicate the age of the person.<br>The last two characters determine the seat allotted to that person.<br>Return the number of passengers who are strictly more than 60 years old.</p>
+<p>Example 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: details = [&quot;7868190130M7522&quot;,&quot;5303914400F9211&quot;,&quot;9273338290F4010&quot;]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The passengers at indices 0, 1, and 2 have ages 75, 92, and 40. Thus, there are 2 people who are over 60 years old.</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: details = [&quot;1313579440F2036&quot;,&quot;2921522980M5644&quot;]</span><br><span class="line">Output: 0</span><br><span class="line">Explanation: None of the passengers are older than 60.</span><br></pre></td></tr></table></figure>
+
+<p>Constraints:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= details.length &lt;= 100</span><br><span class="line">details[i].length == 15</span><br><span class="line">details[i] consists of digits from &#x27;0&#x27; to &#x27;9&#x27;.</span><br><span class="line">details[i][10] is either &#x27;M&#x27; or &#x27;F&#x27; or &#x27;O&#x27;.</span><br><span class="line">The phone numbers and seat numbers of the passengers are distinct.</span><br></pre></td></tr></table></figure>
+
+<p>Approach</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Find the two characters that are used to indicate the age of the person and check if they are strictly more than 60 years old.</span><br></pre></td></tr></table></figure>
+
+<p>Algorithm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. Get the two letters.</span><br><span class="line">2. Check if the person is strictly more than 60 years old.</span><br><span class="line">3. Increase the counter if yes.</span><br></pre></td></tr></table></figure>
+
+<p>Implementation</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">int countSeniors(char ** details, int detailsSize)&#123;</span><br><span class="line">  int count = 0;</span><br><span class="line">  for(int i=0;i&lt;detailsSize;i++)</span><br><span class="line">  &#123;</span><br><span class="line">    if(details[i][11]-&#x27;6&#x27; &gt; 0)</span><br><span class="line">    &#123;</span><br><span class="line">      count++;</span><br><span class="line">      continue;</span><br><span class="line">    &#125;</span><br><span class="line">    if(details[i][11]-&#x27;6&#x27; &gt;= 0 &amp;&amp; details[i][12]-&#x27;0&#x27; &gt;0)</span><br><span class="line">    &#123;</span><br><span class="line">      count++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
                 
             </div>
