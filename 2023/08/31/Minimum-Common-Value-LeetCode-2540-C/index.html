@@ -22,6 +22,8 @@
     
 
     
+        <meta name="description" content="Given two integer arrays nums1 and nums2, sorted in non-decreasing order, return the minimum integer common to both arrays. If there is no common inte"/>
+    
 
     <!--Author-->
     
@@ -30,10 +32,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="One fox from the world"/>
+        <meta property="og:title" content="Minimum Common Value | LeetCode 2540 | C"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Given two integer arrays nums1 and nums2, sorted in non-decreasing order, return the minimum integer common to both arrays. If there is no common inte"/>
     
 
     <!--Open Graph Site Name-->
@@ -41,7 +45,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -60,7 +64,7 @@
 
     <!-- Title -->
     
-    <title>page - Archives - One fox from the world</title>
+    <title>Minimum Common Value | LeetCode 2540 | C - One fox from the world</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -164,170 +168,105 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>Minimum Common Value | LeetCode 2540 | C</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-08-31
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/LeetCode/">#LeetCode</a> <a href="/tags/C/">#C</a> <a href="/tags/Array/">#Array</a> <a href="/tags/Two-Pointers/">#Two Pointers</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/08/11/Creating-my-first-Jenkins-Pipeline/">
-        <h1 class="post-title archive">
-            Creating my first Jenkins Pipeline
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-11
-    </p>
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Given two integer arrays nums1 and nums2, sorted in non-decreasing order, return the minimum integer common to both arrays. If there is no common integer amongst nums1 and nums2, return -1.</p>
+<p>Note that an integer is said to be common to nums1 and nums2 if both arrays have at least one occurrence of that integer.</p>
+<p>Example 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums1 = [1,2,3], nums2 = [2,4]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The smallest element common to both arrays is 2, so we return 2.</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: nums1 = [1,2,3,6], nums2 = [2,3,4,5]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: There are two common elements in the array 2 and 3 out of which 2 is the smallest, so 2 is returned.</span><br></pre></td></tr></table></figure>
+
+<p>Constraints:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= nums1.length, nums2.length &lt;= 105</span><br><span class="line">1 &lt;= nums1[i], nums2[j] &lt;= 109</span><br><span class="line">Both nums1 and nums2 are sorted in non-decreasing order.</span><br></pre></td></tr></table></figure>
+
+<p>Approach</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use the two pointers to go through both lists.</span><br></pre></td></tr></table></figure>
+
+<p>Algorithm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. Incresse the index1 if the current value of nums2 is larger. </span><br><span class="line">2. Increase the index2 if the current value of nums1 is larger.</span><br><span class="line">3. If the values are the same, return the value. Otherwise, return -1.</span><br></pre></td></tr></table></figure>
+
+<p>Implementation</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">int getCommon(int* nums1, int nums1Size, int* nums2, int nums2Size)&#123;</span><br><span class="line">    int index1 = 0;</span><br><span class="line">    int index2 = 0;</span><br><span class="line">    while(index1&lt;nums1Size &amp;&amp;index2&lt;nums2Size)&#123;</span><br><span class="line">        if(nums1[index1] &gt; nums2[index2])</span><br><span class="line">            index2++;</span><br><span class="line">        else if (nums1[index1] &lt; nums2[index2])</span><br><span class="line">            index1++;</span><br><span class="line">        else</span><br><span class="line">            return nums1[index1];</span><br><span class="line">    &#125;</span><br><span class="line">    return -1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+
+<div class="comments" id="comments">
+<script src="https://utteranc.es/client.js"
+    repo="foxfromworld/utterances_comments"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
 </div>
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/08/09/Getting-started-with-Jenkins-on-Ubuntu-18-04/">
-        <h1 class="post-title archive">
-            Getting started with Jenkins on Ubuntu 18.04
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-09
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/08/How-to-track-website-traffic-using-Google-Analytics/">
-        <h1 class="post-title archive">
-            How to track website traffic using Google Analytics
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/08/How-to-add-tags-and-categories/">
-        <h1 class="post-title archive">
-            How to add tags and categories
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/08/How-to-apply-a-new-theme-to-Hexo/">
-        <h1 class="post-title archive">
-            How to apply a new theme to Hexo
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-08
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/07/How-to-add-a-comment-system-to-Hexo/">
-        <h1 class="post-title archive">
-            How to add a comment system to Hexo
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-07
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/03/Remote-development-with-terminal-over-SSH-using-Visual-Studio-Code/">
-        <h1 class="post-title archive">
-            Remote development with terminal over SSH using Visual Studio Code
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/03/How-to-embed-images-in-Hexo-posts/">
-        <h1 class="post-title archive">
-            How to embed images in Hexo posts
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-03
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/02/My-first-page-with-an-image/">
-        <h1 class="post-title archive">
-            My first page with an image
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-02
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/07/31/How-to-create-a-blog-using-GitHub-Pages/">
-        <h1 class="post-title archive">
-            How to create a blog using GitHub Pages
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-07-31
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/archives/">&larr;  Newer Posts</a></li>
-    
-    
-        <li class="next"><a href="/archives/page/3/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
