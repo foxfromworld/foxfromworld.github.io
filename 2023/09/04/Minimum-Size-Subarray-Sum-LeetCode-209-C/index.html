@@ -22,6 +22,8 @@
     
 
     
+        <meta name="description" content="Given an array of positive integers nums and a positive integer target, return the minimal length of asubarray whose sum is greater than or equal to t"/>
+    
 
     <!--Author-->
     
@@ -30,10 +32,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="One fox from the world"/>
+        <meta property="og:title" content="Minimum Size Subarray Sum | LeetCode 209 | C"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Given an array of positive integers nums and a positive integer target, return the minimal length of asubarray whose sum is greater than or equal to t"/>
     
 
     <!--Open Graph Site Name-->
@@ -41,7 +45,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -60,7 +64,7 @@
 
     <!-- Title -->
     
-    <title>Array - One fox from the world</title>
+    <title>Minimum Size Subarray Sum | LeetCode 209 | C - One fox from the world</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -164,127 +168,107 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>#Array</h1>
+                <div class="post-heading">
+                    <h1>Minimum Size Subarray Sum | LeetCode 209 | C</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-09-04
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/LeetCode/">#LeetCode</a> <a href="/tags/C/">#C</a> <a href="/tags/Array/">#Array</a> <a href="/tags/Sliding-Window/">#Sliding Window</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/09/05/Binary-Search-LeetCode-704-C/">
-        <h1 class="post-title archive">
-            Binary Search | LeetCode 704 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-09-05
-    </p>
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Given an array of positive integers nums and a positive integer target, return the minimal length of a<br>subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.</p>
+<p>Example 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: target = 7, nums = [2,3,1,2,4,3]</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The subarray [4,3] has the minimal length under the problem constraint.</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: target = 4, nums = [1,4,4]</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
+
+<p>Example 3:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: target = 11, nums = [1,1,1,1,1,1,1,1]</span><br><span class="line">Output: 0</span><br></pre></td></tr></table></figure>
+
+<p>Constraints:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= target &lt;= 109</span><br><span class="line">1 &lt;= nums.length &lt;= 105</span><br><span class="line">1 &lt;= nums[i] &lt;= 104</span><br></pre></td></tr></table></figure>
+
+<p>Approach</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use sliding window to find the subarray.</span><br></pre></td></tr></table></figure>
+
+<p>Algorithm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. Add the integers up until the sum is greater than or equal to target.</span><br><span class="line">2. Memorise the lenght of the subarray.</span><br><span class="line">3. Aubtract the current value of nums[start].</span><br><span class="line">4. Repeat the above steps.</span><br></pre></td></tr></table></figure>
+
+<p>Implementation</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int minSubArrayLen(int target, int* nums, int numsSize)&#123;</span><br><span class="line">    int sum = 0, start = 0, length = INT_MAX;</span><br><span class="line">    for(int i = 0; i &lt; numsSize; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        sum += nums[i];</span><br><span class="line">        while(sum&gt;=target)&#123;</span><br><span class="line">            if (i-start+1 &lt; length)</span><br><span class="line">                length = i-start+1;  </span><br><span class="line">            sum-=nums[start];</span><br><span class="line">            start++;</span><br><span class="line">        &#125;      </span><br><span class="line">    &#125;</span><br><span class="line">    return (length == INT_MAX)?0:length;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+
+<div class="comments" id="comments">
+<script src="https://utteranc.es/client.js"
+    repo="foxfromworld/utterances_comments"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
 </div>
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/09/04/Minimum-Size-Subarray-Sum-LeetCode-209-C/">
-        <h1 class="post-title archive">
-            Minimum Size Subarray Sum | LeetCode 209 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-09-04
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/31/Circular-Sentence-LeetCode-2490-C/">
-        <h1 class="post-title archive">
-            Circular Sentence | LeetCode 2490 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-31
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/31/Minimum-Common-Value-LeetCode-2540-C/">
-        <h1 class="post-title archive">
-            Minimum Common Value | LeetCode 2540 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-31
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/30/Number-of-Senior-Citizens-LeetCode-2678-C/">
-        <h1 class="post-title archive">
-            Number of Senior Citizens | LeetCode 2678 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/30/Neither-Minimum-nor-Maximum-LeetCode-2733-C/">
-        <h1 class="post-title archive">
-            Neither Minimum nor Maximum | LeetCode 2733 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/29/Apply-Operations-to-an-Array-LeetCode-2460-C/">
-        <h1 class="post-title archive">
-            Apply Operations to an Array | LeetCode 2460 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-29
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
