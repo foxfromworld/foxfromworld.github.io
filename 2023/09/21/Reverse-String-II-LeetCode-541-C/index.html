@@ -22,6 +22,9 @@
     
 
     
+        <meta name="description" content="Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.
+If there are fewer th"/>
+    
 
     <!--Author-->
     
@@ -30,10 +33,13 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="One fox from the world"/>
+        <meta property="og:title" content="Reverse String II | LeetCode 541  | C"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.
+If there are fewer th"/>
     
 
     <!--Open Graph Site Name-->
@@ -41,7 +47,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -60,7 +66,7 @@
 
     <!-- Title -->
     
-    <title>page - Archives - One fox from the world</title>
+    <title>Reverse String II | LeetCode 541  | C - One fox from the world</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -164,170 +170,105 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>Archives</h1>
+                <div class="post-heading">
+                    <h1>Reverse String II | LeetCode 541  | C</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2023-09-21
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+                <div class="col-lg-4 col-lg-offset-2 col-md-5 col-md-offset-1 post-tags">
+                    
+                        
+
+
+<a href="/tags/LeetCode/">#LeetCode</a> <a href="/tags/C/">#C</a> <a href="/tags/String/">#String</a> <a href="/tags/Two-Pointers/">#Two Pointers</a>
+
+
+                    
+                </div>
+                <div class="col-lg-4 col-md-5 post-categories">
+                    
+                        
+
+<a href="/categories/LeetCode/">LeetCode</a>
+
+                    
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/08/30/Number-of-Senior-Citizens-LeetCode-2678-C/">
-        <h1 class="post-title archive">
-            Number of Senior Citizens | LeetCode 2678 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
+
+            <!-- Gallery -->
+            
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>Given a string s and an integer k, reverse the first k characters for every 2k characters counting from the start of the string.</p>
+<p>If there are fewer than k characters left, reverse all of them. If there are less than 2k but greater than or equal to k characters, then reverse the first k characters and leave the other as original.</p>
+<p>Example 1:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;abcdefg&quot;, k = 2</span><br><span class="line">Output: &quot;bacdfeg&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Example 2:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;abcd&quot;, k = 2</span><br><span class="line">Output: &quot;bacd&quot;</span><br></pre></td></tr></table></figure>
+
+<p>Constraints:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1 &lt;= s.length &lt;= 104</span><br><span class="line">s consists of only lowercase English letters.</span><br><span class="line">1 &lt;= k &lt;= 104</span><br></pre></td></tr></table></figure>
+
+<p>Approach</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use two pointers to reverse substring every 2k.</span><br></pre></td></tr></table></figure>
+
+<p>Algorithm</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. Go through the list</span><br><span class="line">2. Reverse k characters every 2k.</span><br><span class="line">3. Always check if the right pointer exceeds the lenght-1.</span><br></pre></td></tr></table></figure>
+
+<p>Implementation</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">char * reverseStr(char * s, int k)&#123;</span><br><span class="line">  int gap = 2*k;</span><br><span class="line">  int left, right, len = strlen(s);</span><br><span class="line">  char c = &#x27;\0&#x27;;</span><br><span class="line">  for(int i = 0;i&lt;len;i+=gap)</span><br><span class="line">  &#123;</span><br><span class="line">    left = i;</span><br><span class="line">    right = (i+k&lt;=len-1)?(i+k-1):(len-1);</span><br><span class="line">    while(left&lt;right)&#123;</span><br><span class="line">      c = s[left];</span><br><span class="line">      s[left] = s[right];</span><br><span class="line">      s[right] = c;</span><br><span class="line">      left++;</span><br><span class="line">      right--;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+                
+            </div>
+
+            <!-- Comments -->
+            
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+
+<div class="comments" id="comments">
+<script src="https://utteranc.es/client.js"
+    repo="foxfromworld/utterances_comments"
+    issue-term="pathname"
+    theme="github-light"
+    crossorigin="anonymous"
+    async>
+</script>
 </div>
+                </div>
             
-                <div class="post-preview">
-    <a href="/2023/08/30/Neither-Minimum-nor-Maximum-LeetCode-2733-C/">
-        <h1 class="post-title archive">
-            Neither Minimum nor Maximum | LeetCode 2733 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/30/Number-of-Even-and-Odd-Bits-LeetCode-2595-C/">
-        <h1 class="post-title archive">
-            Number of Even and Odd Bits | LeetCode 2595 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/30/First-Letter-to-Appear-Twice-LeetCode-2351-C/">
-        <h1 class="post-title archive">
-            First Letter to Appear Twice | LeetCode 2351 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-30
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/29/Apply-Operations-to-an-Array-LeetCode-2460-C/">
-        <h1 class="post-title archive">
-            Apply Operations to an Array | LeetCode 2460 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-29
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/28/Count-the-Number-of-Vowel-Strings-in-Range-LeetCode-2586-C/">
-        <h1 class="post-title archive">
-            Count the Number of Vowel Strings in Range | LeetCode 2586 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-28
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/24/Excel-Sheet-Column-Title-LeetCode-168-C/">
-        <h1 class="post-title archive">
-            Excel Sheet Column Title | LeetCode 168 | C
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-24
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/15/Background-music-in-Viva-La-Dirt-League-s-NPC-videos/">
-        <h1 class="post-title archive">
-            Background music in Viva La Dirt League's NPC videos
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-15
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/11/Creating-my-first-Jenkins-Pipeline/">
-        <h1 class="post-title archive">
-            Creating my first Jenkins Pipeline
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-11
-    </p>
-</div>
-            
-                <div class="post-preview">
-    <a href="/2023/08/09/Getting-started-with-Jenkins-on-Ubuntu-18-04/">
-        <h1 class="post-title archive">
-            Getting started with Jenkins on Ubuntu 18.04
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2023-08-09
-    </p>
-</div>
-            
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-        <li class="previous"><a href="/archives/page/2/">&larr;  Newer Posts</a></li>
-    
-    
-        <li class="next"><a href="/archives/page/4/">Older Posts  &rarr;</a></li>
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
